@@ -35,3 +35,17 @@ buttonClosed.addEventListener('click',function(){
         modal.style.display = 'none';
     },400);
 });
+/// Prenchendo o Projetos container
+projetos.map(function(item,index){
+
+  let projetosContainer = document.getElementById('container').cloneNode(true);
+  console.log(item.name);
+  projetosContainer.querySelector('.container-img img').src = item.image;
+  projetosContainer.querySelector('.projetos-titulo').innerHTML = item.name;
+  projetosContainer.querySelector('.projetos-info').innerHTML = item.descricao;
+  projetosContainer.querySelector('.link-projeto').href = item.link;
+
+
+  document.querySelector('section.projetos').append(projetosContainer);
+});
+
