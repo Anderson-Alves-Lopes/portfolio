@@ -22,6 +22,7 @@
     100%{color:#ccc ;text-shadow: 2px 2px  5px #222;}
 }
 
+
 header{
     padding:10px 0; 
     background-image:linear-gradient(90deg, #1a07eb, #000 40%,#1a07eb);
@@ -49,6 +50,7 @@ header li a:hover{
     text-decoration:underline;
     font-size:19px;
 }
+
 header h1{
     display:block;
     color:#fff;
@@ -117,11 +119,37 @@ section.banner h3{
     color:#ccc;
     margin:10px;
 }
-section.modal-skills{
+section.modal{
   text-align:center;
   padding:40px 0;
-  background-color:#d1d1d1;
+  background-image:url('../images/background_02.jpeg');
+  background-size:cover;
+  background-color:#ccc;
   position:relative;
+}
+section.modal > .container{
+    flex-direction:column;
+    align-items: center;
+}
+.modal-info{
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+    gap:30px;
+    max-width:600px;
+    text-shadow:0 0 0 #000;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color:#fff;
+}
+.modal-info h2{
+    color:#aaa;
+    font-size:30px;
+}
+.modal-info p{
+    color:#bbb;
+    font-size:17px;
+    line-height:23px;
+    text-align:left;
 }
 .modal-container {
     margin:auto;
@@ -131,22 +159,23 @@ section.modal-skills{
     padding:30px;
     justify-items:center;
     gap:40px 30px;
-    max-width:900px;
+    max-width:600px;
     width:90%;
     position:absolute;
-    top:30;
+    top:20px;
     left:50%;
     z-index:5;
-    transform:translate(-50%, -50%);
+    transform:translateX(-50%);
     background-color:rgba(0,0,0,0.9);
     transition:all ease 0.4s;
 }
-section.modal-skills button{
+section.modal button{
     text-decoration:none;
     background-color:#1a07eb;
+    max-width:250px;
     padding:10px;
     color:#fff;
-    margin-top:10px;
+    margin-top:30px;
     border:none;
     cursor:pointer;
     font-size:15px;
@@ -154,23 +183,23 @@ section.modal-skills button{
     box-shadow: 3px 0 12px 2px rgba(0,0,0,0.75);
     transition:all 0.4s;
 }
-section.modal-skills button:hover{
+section.modal button:hover{
     color:#666;
     box-shadow: 3px 0 12px 2px rgba(250,250,250,0.75);
 }
 .modal-card{
     background-color:#ccc;
-    width:150px;
+    width:120px;
     padding:20px;
     border-radius:10px;
 }
 .modal-card img{
-    width:70px;
+    width:60px;
 }
 .modal-card h2{
     color:#333;
     margin-top:20px;
-    font-size:17px;
+    font-size:14px;
 }
 .closed-modal{
     background-color:#ccc;
