@@ -26,8 +26,8 @@
 }
 @keyframes link{
     0%{left:0;}
-    50%{left:1px;}
-    100%{left:-1px;}
+    50%{left:2px;}
+    100%{left:-2px;}
 }
 
 

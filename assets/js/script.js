@@ -44,6 +44,7 @@ projetos.map(function(item,index){
   projetosContainer.querySelector('.projetos-titulo').innerHTML = item.name;
   projetosContainer.querySelector('.projetos-info').innerHTML = item.descricao;
   projetosContainer.querySelector('.link-projeto').href = item.link;
+  console.log(item.link)
 
 
   document.querySelector('section.projetos').append(projetosContainer);
