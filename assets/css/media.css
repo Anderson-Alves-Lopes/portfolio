@@ -27,6 +27,9 @@
         
         grid-template-columns: repeat(2, 1fr);
     }
+    #container .container-img{
+        width:90%;
+    }
    
 }
 
