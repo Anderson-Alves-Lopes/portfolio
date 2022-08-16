@@ -150,11 +150,11 @@ section.modal > .container{
     background-color:#fff;
 }
 .modal-info h2{
-    color:#aaa;
+    color:#555;
     font-size:30px;
 }
 .modal-info p{
-    color:#bbb;
+    color:#777;
     font-size:17px;
     line-height:23px;
     text-align:left;
@@ -221,7 +221,7 @@ section.modal button:hover{
     cursor:pointer;
 }
 section.projetos{
-    background-color:#555;
+    background-color:#222;
 }
 #container {
     flex-direction:column;
