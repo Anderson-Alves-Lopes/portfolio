@@ -1,57 +1,81 @@
 
-@media screen and (max-width:700px){
-    header .menu{
-        display:block;
-        cursor:pointer;
-        text-shadow: 0 0 4px #000;
+
+@media screen and (max-width:900px) {
+    section.top .container {
+        min-height:calc(100vh - 75px);
+        flex-direction: column;
     }
-    .container  ul{
+}
+@media screen and (max-width:800px){
+    header nav {
+        width:100%;
         display:none;
-        width:150px;
-        height:calc(100vh - 68px);
-        position:absolute;
-        top:67.5px;
-        right:0;
+        background-color:rgba(0,0,0,.6);
+        position:fixed;
+        top:70px;
+        left:0;
+        bottom:0;
+        z-index:99;
+        border-top:1px solid rgba(255,255,255, .3);
+    }
+    .menu-open,
+    .menu-closed{display:block;}
+    header h1{ margin:auto;}
+    header ul{
         flex-direction: column;
         align-items:center;
-        padding-top:40px;
-        gap:40px;
-        background-image:linear-gradient(90deg, #1a07eb, #000 40%,#1a07eb);
-        z-index:5;
-        border-top:1px solid #555;
-        opacity:0;
-        transition:all ease 0.4s;
+        justify-content: center;
+        background-color:rgba(0,0,0,.9);
+        width:40vw;
+        height:100%;
+    }
+    header li{
+        padding:30px 0;
+    }
+    .center-skills{
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
     }
   
-    .modal-container{
-        
-        grid-template-columns: repeat(2, 1fr);
-    }
-    #container .container-img{
-        width:90%;
-    }
-   
 }
-
-
-@media screen and (max-width:400px){
+@media screen and (max-width:600px){
+    .center-skills .closed-modal{
+        position:absolute;
+        right:18px;
+        top:initial;
+        bottom:18px;
+       
+    }
+    .center-skills-box{
+        grid-template-columns:repeat(3,1fr);
+    }
+    .skill-card h2{
+        font-size:17px;
+        margin-top:10px;
+    }
+}
+@media screen and (max-width:460px){
+    .center-skills-box{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media screen and (max-width:360px){
     header h1{
-        font-size:35px;
-        padding:3px 0;
+        font-size:36px;
     }
-    .modal-card{
-        background-color:#ccc;
-        width:100px;
-        padding:20px;
-        border-radius:10px;
+    .top-img img{
+        width:200px;
+        height:200px;
+        
     }
-    .modal-card img{
-        width:50px;
+    .top-text h2{
+        font-size:40px;
     }
-    .modal-card h2{
-        color:#333;
-        margin-top:20px;
-        font-size:12px;
+    .top-text h4{
+        font-size:25px;
     }
-
+    .center-info button{
+        font-size:15px;    
+    }
 }
