@@ -28,6 +28,14 @@ body{
     50%{color:#ccc; left: 4px;text-shadow:0 0 10px #555;}
     100%{color:#222; left:0;text-shadow:0 0 10px #fff;}
 }
+@keyframes neon {
+    0%, 39%, 41%, 59%, 61%, 100% {
+        text-shadow:
+        #eee 0 0 12px,
+        #239aff 0 0 24px,
+        #23e7ff 0 0 36px;
+    }
+}
 
 [data-anime]{
     opacity:0;
@@ -76,7 +84,6 @@ header h1{
     opacity:.7;
 }
 .menu-open{
-    
     position:absolute;
     right:10px;
     top:40px;
@@ -137,7 +144,7 @@ section.top .container {
     justify-content:center;
     gap:30px;
     color:#fff;
-    text-shadow: 1px 1px 5px #222;
+    text-shadow: 1px solid rgba(255,255,255, .3) 1px solid rgba(255,255,255, .3) 5px #222;
 }
 .top-text h2{
     font-size:50px;
@@ -176,12 +183,12 @@ section.center .container {
     background-color: rgba(16, 16, 132,.5);
     color:#fff;
     cursor:pointer;
-    box-shadow:0 1px 6px #fff;
+    box-shadow:0 1px solid rgba(255,255,255, .3) 6px #fff;
     transition:all ease .4s;
 }
 .center-info button:hover{
     opacity:.5;
-    box-shadow:0 1px 15px #fff;
+    box-shadow:0 1px solid rgba(255,255,255, .3) 15px #fff;
 }
 .center-skills{
     width:100%;
@@ -290,9 +297,10 @@ section.certificados {
 section.certificados > .container{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
+    gap:10px;
     justify-items:center;
-    align-items: center;
-    border:1px solid rgba(255,255,255, .3);
+    align-items: flex-start;
+    border:1px solid rgba(255,255,255, .3) solid rgba(255,255,255, .3);
 }
 .certificados-box{
    margin:20px auto;
@@ -303,8 +311,8 @@ section.certificados > .container{
 
 }
 .certificados-box img{
-    width:300px;
-    height:150px;
+    width:100%;
+    max-height:150px;
 }
 .certificados-box h3{
     color:#ddd;
@@ -313,12 +321,106 @@ section.certificados > .container{
     text-align:center;
     line-height:25px;
     max-width:300px;
-    text-shadow:1px 1px 2px #000;
+    text-shadow:1px solid rgba(255,255,255, .3) 1px solid rgba(255,255,255, .3) 2px #000;
 }
+/* == section-contatos ==== */
 
+section.contato .container{
+    background-image:linear-gradient(90deg,#232541,#121429);
+}    
+.contato-sociais{
+    flex:1;
+    display:grid;
+    justify-items:center;
+    align-items:center;
+    grid-template-columns:repeat(2,1fr);
+}
 .contato-social{
+    padding:20px;
+    text-align:center;
+}
+.contato-social a{
     font-size:50px;
+    text-decoration:none;
+    color:#eee;
+    animation: neon 5s infinite;
 }
 .contato-social p{
-    font-size:20px;
+    font-size:18px;
+    margin-top:10px;
+}
+.contato-form{
+    width:70%;
+    display:flex;
+    padding:20px 0;
+    flex-direction:column;
+    align-items:center;
+}
+.contato-form h4{
+    color:#fff;
+    text-shadow:1px solid rgba(255,255,255, .3) 1px solid rgba(255,255,255, .3) 2px #000;
+    font-size:25px;
+    margin:20px 0;
+}
+.contato-form form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    width:70%;
+}
+.contato-form form input{
+    width:80%;
+    height:40px;
+    border:none;
+    border-bottom:1px  solid rgba(255,255,255, .3);
+    background-color:transparent;
+    padding-left:5px;
+    outline:none;
+    margin:0 auto;
+}
+.contato-form form input::placeholder{
+    font-style:italic;
+}
+.contato-form form textarea{
+    width:80%;
+    min-height:150px;
+    max-height:500px;
+    padding:5px;
+    resize: vertical;
+    border:none;
+    border-bottom:1px solid rgba(255,255,255, .3) ;
+    background-color:transparent;
+    padding-left:5px;
+    outline:none;
+    margin:0 auto;
+}
+.contato-form form textarea::placeholder{
+    font-style:italic;
+}
+.contato-form form input[type=submit]{
+    background-color:#000;
+    width:50%;
+    margin: 20px auto;
+    cursor:pointer;
+    font-size:17px;
+    font-style:italic;
+    font-weight:800;
+    color:#fff;
+    border:1px solid rgba(255,255,255, .9);
+    border-radius:20px;
+    box-shadow:0 0 5px 0px #fff;
+    transition:all ease .4s;
+}
+.contato-form form input[type=submit]:hover{
+  opacity:.5;
+}
+/* footer */
+footer .container{
+  padding:15px 2%;  
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  color:rgba(255,255,255, .5);
+  line-height:25px;
 }

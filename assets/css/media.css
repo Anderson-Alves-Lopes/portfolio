@@ -37,7 +37,28 @@
         top:50%;
         transform:translate(-50%,-50%);
     }
-  
+    .projeto-img{
+        width:80%;
+    }
+    section.certificados > .container{
+        display:grid;
+        grid-template-columns:repeat(2, 1fr);
+        gap:10px;
+       
+    }
+    section.contato .container{
+        flex-direction: column;
+        padding: 30px 2%;
+    }    
+    .contato-sociais{
+        grid-template-columns:repeat(4,1fr);
+    }
+    .contato-form{
+        width:100%;
+    }
+    .contato-form form{
+        width:90%;
+    }
 }
 @media screen and (max-width:600px){
     .center-skills .closed-modal{
@@ -54,15 +75,34 @@
         font-size:17px;
         margin-top:10px;
     }
+    .contato-sociais{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
 @media screen and (max-width:460px){
+    header h1{
+        font-size:33px;
+    }
+    .menu-open{
+        top:30px;
+    }
     .center-skills-box{
         grid-template-columns:repeat(2,1fr);
+    }
+    .projeto-img{
+        width:100%;
+    }
+    section.certificados > .container{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:10px;
+       
     }
 }
 @media screen and (max-width:360px){
     header h1{
-        font-size:36px;
+        font-size:30px;
+        margin:initial;
     }
     .top-img img{
         width:200px;
@@ -77,5 +117,9 @@
     }
     .center-info button{
         font-size:15px;    
+    }
+    .contato-form h4{font-size:20px}
+    .contato-form form{
+        width:100%;
     }
 }
