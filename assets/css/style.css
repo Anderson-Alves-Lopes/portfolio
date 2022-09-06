@@ -11,6 +11,7 @@ h1, h2, h3, h4 {
 }
 body{
     background-color:rgba(0,0,0,.9);
+    overflow-x: hidden;
 }
 .container{
     display:flex;
@@ -19,6 +20,7 @@ body{
     margin:auto;
     padding:0 2%;
 }
+.modelos{display:none;}
 
 /* Animações */
 @keyframes h1anime{
@@ -27,6 +29,20 @@ body{
     100%{color:#222; left:0;text-shadow:0 0 10px #fff;}
 }
 
+[data-anime]{
+    opacity:0;
+    transition:all ease 1s;
+}
+[data-anime="left"]{
+    transform:translate3d(-50px, 0 ,0);
+}
+[data-anime="right"]{
+    transform:translate3d(50px, 0, 0);
+}
+[data-anime].animate{
+    opacity:1;
+    transform:translate3d(0, 0, 0)
+}
 /* === header ==== */
 
 header {
@@ -212,3 +228,97 @@ section.center .container {
     margin-top:10px;
 }
 
+/* section-bottom  */
+
+
+section.bottom .container{
+    margin: auto;
+    display:flex;
+    padding:2%;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-image:url('../images/background_03.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+section.bottom .projeto-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:30px;
+    background-color:rgba(16, 16, 132,.1);
+    color:#fff;
+}
+.projeto-titulo{
+    font-weight:bold;
+    font-style:italic;
+    font-size:35px;
+}
+.projeto-img{
+    width:60%;
+    margin: 40px auto;
+}
+.projeto-img img{
+    width:100%;
+    
+}
+.projeto-text{
+    max-width:800px;
+    line-height:25px;
+}
+.projeto-link{
+    background-color:#000;
+    text-decoration:none;
+    margin-top:20px;
+    color:#fff;
+    font-family: 'Tiro Devanagari Hindi', serif;
+    padding:10px 15px;
+    border-radius:20px;
+    box-shadow: rgb(228, 232, 236) 5px 5px 30px -10px;
+    transition:all ease .4s;
+}
+.projeto-link:hover{
+    opacity:.5;
+}
+/* section-certificados */
+
+section.certificados {
+    padding:30px 0;
+}
+section.certificados > .container{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    justify-items:center;
+    align-items: center;
+    border:1px solid rgba(255,255,255, .3);
+}
+.certificados-box{
+   margin:20px auto;
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   justify-content:center;
+
+}
+.certificados-box img{
+    width:300px;
+    height:150px;
+}
+.certificados-box h3{
+    color:#ddd;
+    font-size:18px;
+    margin-top:15px;
+    text-align:center;
+    line-height:25px;
+    max-width:300px;
+    text-shadow:1px 1px 2px #000;
+}
+
+.contato-social{
+    font-size:50px;
+}
+.contato-social p{
+    font-size:20px;
+}

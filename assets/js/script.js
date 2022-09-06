@@ -20,5 +20,37 @@ closedModal.addEventListener('click',function(){
     setTimeout(function(){
       centerSkills.style.display = 'none';
      
-    },300);
+    },500);
 });
+
+projetos.map((item, index)=>{
+  let bottomContainer = document.querySelector('.projeto-container').cloneNode(true);
+      bottomContainer.querySelector('.projeto-titulo').innerHTML = item.name;
+      bottomContainer.querySelector('.projeto-img img').src= item.image;
+      bottomContainer.querySelector('.projeto-text').innerHTML = item.descricao;
+      bottomContainer.querySelector('.projeto-link').href = item.link;
+  document.querySelector('section.bottom .container').append(bottomContainer);
+});
+
+
+const target = document.querySelectorAll('[data-anime');
+const animationClass = 'animate';
+
+function animeScroll(){
+  const windowTop = window.pageYOffset + (((window.innerHeight * 3) / 4) + 50);
+  for(let i = 0; i < target.length ; i++){
+    if(windowTop > target[i].offsetTop){
+      target[i].classList.add(animationClass);
+    }else{
+      target[i].classList.remove(animationClass);
+    }
+  }
+}
+animeScroll();
+if(target.length){
+  window.addEventListener('scroll',function(){
+    animeScroll();
+  });
+}
+let div = document.querySelector('.center-button');
+console.log(div.offsetTop);
