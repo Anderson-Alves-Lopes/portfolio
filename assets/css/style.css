@@ -47,6 +47,9 @@ body{
 [data-anime="right"]{
     transform:translate3d(50px, 0, 0);
 }
+[data-anime="bottom"]{
+    transform:translate3d(0, 50px, 0);
+}
 [data-anime].animate{
     opacity:1;
     transform:translate3d(0, 0, 0)
@@ -154,13 +157,22 @@ section.top .container {
 }
 /* === section-center ==== */
 
-section.center .container {
-    position:relative;
+section.center > .container {
+    flex-direction: column;
+}
+.center-box{
+    width:100%;
+    margin:30px auto;
+    position: relative;
+    
+    z-index:3;
+    background-color: #121429;
 }
 .center-info{
     max-width:700px;
     margin:30px auto;
-    padding:30px;
+    position: relative;    
+    
 }
 .center-info h3{
     text-align: center;
@@ -198,7 +210,7 @@ section.center .container {
     padding:20px;
     position:absolute;
     left:0;
-    top:0;
+    top:100%;
     z-index:99;
     color:#fff;
     transition:all ease .5s;

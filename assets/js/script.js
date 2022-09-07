@@ -32,10 +32,22 @@ projetos.map((item, index)=>{
   document.querySelector('section.bottom .container').append(bottomContainer);
 });
 
-
+// Animações  //
 const target = document.querySelectorAll('[data-anime');
 const animationClass = 'animate';
+const debounce = (func, wait) => {
+  let timeout;
 
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+};
 function animeScroll(){
   const windowTop = window.pageYOffset + (((window.innerHeight * 3) / 4) + 50);
   for(let i = 0; i < target.length ; i++){
@@ -44,13 +56,14 @@ function animeScroll(){
     }else{
       target[i].classList.remove(animationClass);
     }
+    console.log(windowTop);
+    console.log(target[i].offsetTop);
   }
 }
 animeScroll();
 if(target.length){
-  window.addEventListener('scroll',function(){
-    animeScroll();
-  });
-}
-let div = document.querySelector('.center-button');
-console.log(div.offsetTop);
+  window.addEventListener('scroll', debounce(function(){
+      animeScroll();
+      
+  },200));
+   }
