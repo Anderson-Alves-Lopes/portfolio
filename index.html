@@ -123,11 +123,11 @@
               </div><!---->
               <div class="certificados-box">
                 <img data-anime="left"  src="assets/images/certificados/certificado_banco_dados.jpg" alt=""/>
-                <h3 data-anime="right" >Certificado curso de Front-end Completo da Danki Code</h3>
+                <h3 data-anime="right" >Certificado curso de Banco de Dados B7Web</h3>
               </div><!---->
               <div class="certificados-box">
                 <img data-anime="left"  src="assets/images/certificados/certificado front_end_completo1.jpg" alt=""/>
-                <h3 data-anime="right" >Certificado curso de JavaScript B7Web</h3>
+                <h3 data-anime="right" >Certificado curso de Front-end Completo da Danki Code</h3>
               </div><!---->
            </div><!--container-->
         </section><!--certificados-->
@@ -161,12 +161,22 @@
             </div><!--contato-sociais-->
               <div data-anime="right"  class="contato-form">
                  <h4>Se preferir mande um E-mail</h4>
-                 <form method="Post">
-                    <input type="text" name="nome" placeholder="Nome "/>
-                    <input type="email" name="e-mail" placeholder="E-mail"/>
-                    <input type="tel" name="telefone" placeholder="Telefone"/>
-                    <textarea placeholder="Deixe sua mensagem"></textarea>
+                 <form  method="post" action="https://formspree.io/f/meqdeljy" class="validator">
+                  
+                  <label>
+                    
+                    <input  type="text" name="nome" placeholder="Nome " data-rules="required|min=5"/>
+                  </label>
+                  <label>
+                    <input  type="text" name="email" placeholder="E-mail" data-rules="required|email" />
+                  </label>
+                  <label>
+                    <input type="tel" name="telefone" placeholder="Telefone" data-rules="required|min=10" />
+                  </label>
+                    <textarea name="menssage" placeholder="Deixe sua mensagem"></textarea>
                     <input type="submit" name="acao" value="Enviar mensagem"/>
+                    
+                    <input type="hidden" name="redirectTo" value="https://anderson-alves-lopes.github.io/portfolio/">
                  </form>
               </div><!--contato-form-->
             </div><!--container--> 

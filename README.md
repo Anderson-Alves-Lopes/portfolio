@@ -17,28 +17,4 @@ Esse projeto é meu perfil pessoal e profissional para poder mostrar meus trabal
                     </p>
 
 
-                        <div class="closed-modal"><p>FECHAR</p><p>"X"</p></div>
-                <div class="modal-card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-            <h2>HTML 5</h2>
-           </div><!--modal-card-->
-           <div class="modal-card">
-           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-           <h2>CSS 3</h2>
-        </div><!--modal-card-->
-        <div class="modal-card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-            <h2>JAVASCRIPT</h2>
-        </div><!--modal-card-->
-        <div class="modal-card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
-            <h2>MYSQL</h2>
-        </div><!--modal-card-->
-        <div class="modal-card">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-            <h2>GIT</h2>
-        </div><!--modal-card-->
-        <div class="modal-card"> 
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
-           <h2>GITHUB</h2>
-        </div><!--modal-card-->
+              <form  method="post" action="https://formspree.io/f/meqdeljy"  class="validator">
