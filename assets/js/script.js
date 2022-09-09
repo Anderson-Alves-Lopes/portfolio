@@ -42,7 +42,7 @@ closedModal.addEventListener('click',function(){
     setTimeout(function(){
       centerSkills.style.display = 'none';
      
-    },500);
+    },300);
 });
 
 projetos.map((item, index)=>{
@@ -105,7 +105,9 @@ if(target.length){
         }
       }
       if(send){
+        
         form.submit();
+      
       }
     },
     checkInput:(input) =>{
@@ -132,7 +134,8 @@ if(target.length){
                       return 'Digite um e-mail válido';
                     }      
               }
-            break;    
+            break;  
+            
           }
         }
       }
@@ -156,7 +159,9 @@ if(target.length){
        for(let i = 0; i < errorElements.length; i++){
         errorElements[i].remove();
        }
+     
     }
+    
    };
    let form = document.querySelector('.validator');
    form.addEventListener('submit', validator.handleSubmit)
