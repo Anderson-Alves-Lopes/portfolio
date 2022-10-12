@@ -18,5 +18,9 @@ let projetos = [
     {id:4, name:'Cão Feliz adestramento', image:'assets/images/projetos/adestramento.png',
     descricao:'Esse Projeto foi baseado em um layout do site Nicepage, mas foi usado somente as imagens e design o código foi totalmente escolha minha sem qualquer cópia assim como todas as alterações foram de minha autoria.<br/>O site foi produzido usando Html5, Css3 e JavaScript.<br/>Meu maior desafio foi conciliar o efeito de animação scroll com a posição dos elemenos, pois este foi o primeiro projeto que uso este tipo de efeito de animação. ',
     link:'https://anderson-alves-lopes.github.io/adestramento/'},
+
+    {id:4, name:'Requisição fetch e async', image:'assets/images/projetos/requisicao.png',
+    descricao:'Este trabalho simples visa mostrar minha capacidade em fazer requisições tanto fetch como async .Usando uma Api este projeto consite em mostrar os filmes em cartazes no cinema.O projeto foi feito usando Reactjs e é totalmente funcional e responsivo. ',
+    link:'https://gleaming-mousse-08e0c4.netlify.app/'},
     
 ]
