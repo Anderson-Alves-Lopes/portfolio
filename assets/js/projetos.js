@@ -20,7 +20,7 @@ let projetos = [
     link:'https://anderson-alves-lopes.github.io/adestramento/'},
 
     {id:4, name:'Requisição fetch e async', image:'assets/images/projetos/requisicao.png',
-    descricao:'Este trabalho simples visa mostrar minha capacidade em fazer requisições tanto fetch como async .Usando uma Api este projeto consite em mostrar os filmes em cartazes no cinema.O projeto foi feito usando Reactjs e é totalmente funcional e responsivo. ',
+    descricao:'Este trabalho simples visa mostrar minha capacidade em fazer requisições tanto fetch como async e o uso do Reducer .<br/>Usando uma Api este projeto consite em mostrar os filmes em cartazes no cinema.<br/>Na segunda etapa usando o Reducer foi feito dois projetos similares de um contandor que tem três botões um adiciona 1, outro subtrai 1 e o ultimo zera a contagem.<br/>Mesmo os dois contadores são identicos mas o código de Reducer2 é muito mais limpo.<br/> O projeto foi feito usando Reactjs e é totalmente funcional e responsivo. ',
     link:'https://gleaming-mousse-08e0c4.netlify.app/'},
     
 ]
